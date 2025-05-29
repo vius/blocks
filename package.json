@@ -1,0 +1,20 @@
+{
+	"name": "blocks",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build:registry": "jsrepo build"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"packageManager": "pnpm@10.4.1",
+	"devDependencies": {
+		"jsrepo": "^2.2.1"
+	},
+	"dependencies": {
+		"chalk": "^5.4.1"
+	}
+}
