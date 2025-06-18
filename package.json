@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build:registry": "jsrepo build"
+		"build": "jsrepo build"
 	},
 	"keywords": [],
 	"author": "",
@@ -15,6 +15,7 @@
 		"jsrepo": "^2.2.1"
 	},
 	"dependencies": {
+		"@tanstack/vue-query": "^5.79.2",
 		"chalk": "^5.4.1"
 	}
 }

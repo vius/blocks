@@ -1,41 +1,23 @@
 {
+	"name": "@github/vius/blocks",
 	"categories": [
 		{
 			"name": "utils",
 			"blocks": [
 				{
-					"name": "add",
+					"name": "request",
 					"directory": "src/utils",
 					"category": "utils",
 					"tests": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
-						"add.ts"
+						"request.ts"
 					],
 					"localDependencies": [],
 					"_imports_": {},
-					"dependencies": [],
-					"devDependencies": []
-				},
-				{
-					"name": "print",
-					"directory": "src/utils",
-					"category": "utils",
-					"tests": false,
-					"subdirectory": false,
-					"list": true,
-					"files": [
-						"print.ts"
-					],
-					"localDependencies": [
-						"utils/add"
-					],
-					"_imports_": {
-						"./add": "{{utils/add}}"
-					},
 					"dependencies": [
-						"chalk@^5.4.1"
+						"@tanstack/vue-query@^5.79.2"
 					],
 					"devDependencies": []
 				}
