@@ -2,6 +2,57 @@
 	"name": "@github/vius/blocks",
 	"categories": [
 		{
+			"name": "components",
+			"blocks": [
+				{
+					"name": "notion-like-editor",
+					"directory": "src/components/notion-like-editor",
+					"category": "components",
+					"tests": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"components/BubbleMenu.vue",
+						"components/CollaborationStatus.vue",
+						"components/DragHandle.vue",
+						"components/FloatingMenu.vue",
+						"components/TableMenu.vue",
+						"extensions/block-extension.js",
+						"extensions/drag-drop.js",
+						"extensions/markdown-shortcuts.js",
+						"extensions/slash-command/CommandsList.vue",
+						"extensions/slash-command/commands.js",
+						"extensions/slash-command/suggestion.js",
+						"index.vue",
+						"services/collaboration.js"
+					],
+					"localDependencies": [],
+					"dependencies": [
+						"@tiptap/core",
+						"@tiptap/pm@^2.25.0",
+						"@tiptap/suggestion@^2.25.0",
+						"@tiptap/vue-3@^2.25.0",
+						"tippy.js@^6.3.7",
+						"@tiptap/starter-kit@^2.25.0",
+						"@tiptap/extension-placeholder@^2.25.0",
+						"@tiptap/extension-typography@^2.25.0",
+						"@tiptap/extension-image@^2.25.0",
+						"@tiptap/extension-link@^2.25.0",
+						"@tiptap/extension-table@^2.25.0",
+						"@tiptap/extension-table-row@^2.25.0",
+						"@tiptap/extension-table-header@^2.25.0",
+						"@tiptap/extension-table-cell@^2.25.0",
+						"@tiptap/extension-collaboration@^2.25.0",
+						"@tiptap/extension-collaboration-cursor@^2.25.0",
+						"yjs@^13.6.27",
+						"y-websocket@^3.0.0"
+					],
+					"devDependencies": [],
+					"_imports_": {}
+				}
+			]
+		},
+		{
 			"name": "utils",
 			"blocks": [
 				{

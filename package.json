@@ -4,8 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "jsrepo build"
+		"build": "jsrepo build --allow-subdirectories"
 	},
 	"keywords": [],
 	"author": "",
@@ -16,6 +15,26 @@
 	},
 	"dependencies": {
 		"@tanstack/vue-query": "^5.79.2",
-		"chalk": "^5.4.1"
+		"@tiptap/extension-bubble-menu": "^2.25.0",
+		"@tiptap/extension-collaboration": "^2.25.0",
+		"@tiptap/extension-collaboration-cursor": "^2.25.0",
+		"@tiptap/extension-drag-handle-react": "^2.25.0",
+		"@tiptap/extension-floating-menu": "^2.25.0",
+		"@tiptap/extension-image": "^2.25.0",
+		"@tiptap/extension-link": "^2.25.0",
+		"@tiptap/extension-placeholder": "^2.25.0",
+		"@tiptap/extension-table": "^2.25.0",
+		"@tiptap/extension-table-cell": "^2.25.0",
+		"@tiptap/extension-table-header": "^2.25.0",
+		"@tiptap/extension-table-row": "^2.25.0",
+		"@tiptap/extension-typography": "^2.25.0",
+		"@tiptap/pm": "^2.25.0",
+		"@tiptap/starter-kit": "^2.25.0",
+		"@tiptap/suggestion": "^2.25.0",
+		"@tiptap/vue-3": "^2.25.0",
+		"chalk": "^5.4.1",
+		"tippy.js": "^6.3.7",
+		"y-websocket": "^3.0.0",
+		"yjs": "^13.6.27"
 	}
 }
