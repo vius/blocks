@@ -3,7 +3,7 @@
 	"name": "@github/vius/blocks",
 	"readme": "README.md",
 	"repos": ["https://github.com/vius/blocks"],
-	"dirs": ["./src"],
+	"dirs": ["./registry"],
 	"doNotListBlocks": [],
 	"doNotListCategories": [],
 	"listBlocks": [],
