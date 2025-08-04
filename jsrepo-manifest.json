@@ -2,112 +2,165 @@
 	"name": "@github/vius/blocks",
 	"categories": [
 		{
-			"name": "notion-like-editor",
+			"name": "components",
 			"blocks": [
 				{
-					"name": "components",
-					"directory": "registry/notion-like-editor/components",
-					"category": "notion-like-editor",
+					"name": "notion-like-editor",
+					"directory": "registry/components/notion-like-editor",
+					"category": "components",
 					"tests": false,
+					"docs": false,
 					"subdirectory": true,
 					"list": true,
 					"files": [
-						"BubbleMenu.vue",
-						"CollaborationStatus.vue",
-						"DragHandle.vue",
-						"FloatingMenu.vue",
-						"TableMenu.vue"
-					],
-					"localDependencies": [],
-					"dependencies": [],
-					"devDependencies": [],
-					"_imports_": {}
-				},
-				{
-					"name": "extensions",
-					"directory": "registry/notion-like-editor/extensions",
-					"category": "notion-like-editor",
-					"tests": false,
-					"subdirectory": true,
-					"list": true,
-					"files": [
-						"block-extension.js",
-						"drag-drop.js",
-						"markdown-shortcuts.js",
-						"slash-command/CommandsList.vue",
-						"slash-command/commands.js",
-						"slash-command/suggestion.js"
+						"components/BubbleMenu.vue",
+						"components/CollaborationStatus.vue",
+						"components/DragHandle.vue",
+						"components/FloatingMenu.vue",
+						"components/TableMenu.vue",
+						"extensions/block-extension.js",
+						"extensions/drag-drop.js",
+						"extensions/markdown-shortcuts.js",
+						"extensions/slash-command/CommandsList.vue",
+						"extensions/slash-command/commands.js",
+						"extensions/slash-command/suggestion.js",
+						"index.vue",
+						"services/collaboration.js"
 					],
 					"localDependencies": [],
 					"dependencies": [
-						"@tiptap/core",
-						"@tiptap/pm@^2.25.0",
-						"@tiptap/suggestion@^2.25.0",
-						"@tiptap/vue-3@^2.25.0",
-						"tippy.js@^6.3.7"
-					],
-					"devDependencies": [],
-					"_imports_": {}
-				},
-				{
-					"name": "index",
-					"directory": "registry/notion-like-editor",
-					"category": "notion-like-editor",
-					"tests": false,
-					"subdirectory": false,
-					"list": true,
-					"files": [
-						"index.vue"
-					],
-					"localDependencies": [
-						"notion-like-editor/extensions",
-						"notion-like-editor/components",
-						"notion-like-editor/services"
-					],
-					"_imports_": {
-						"./extensions/slash-command/commands.js": "{{notion-like-editor/extensions}}/slash-command/commands.js",
-						"./extensions/slash-command/suggestion.js": "{{notion-like-editor/extensions}}/slash-command/suggestion.js",
-						"./extensions/block-extension.js": "{{notion-like-editor/extensions}}/block-extension.js",
-						"./extensions/markdown-shortcuts.js": "{{notion-like-editor/extensions}}/markdown-shortcuts.js",
-						"./extensions/drag-drop.js": "{{notion-like-editor/extensions}}/drag-drop.js",
-						"./components/FloatingMenu.vue": "{{notion-like-editor/components}}/FloatingMenu.vue",
-						"./components/BubbleMenu.vue": "{{notion-like-editor/components}}/BubbleMenu.vue",
-						"./components/CollaborationStatus.vue": "{{notion-like-editor/components}}/CollaborationStatus.vue",
-						"./services/collaboration.js": "{{notion-like-editor/services}}/collaboration.js"
-					},
-					"dependencies": [
-						"@tiptap/vue-3@^2.25.0",
-						"@tiptap/starter-kit@^2.25.0",
-						"@tiptap/extension-placeholder@^2.25.0",
-						"@tiptap/extension-typography@^2.25.0",
-						"@tiptap/extension-image@^2.25.0",
-						"@tiptap/extension-link@^2.25.0",
-						"@tiptap/extension-table@^2.25.0",
-						"@tiptap/extension-table-row@^2.25.0",
-						"@tiptap/extension-table-header@^2.25.0",
-						"@tiptap/extension-table-cell@^2.25.0",
-						"@tiptap/extension-collaboration@^2.25.0",
-						"@tiptap/extension-collaboration-cursor@^2.25.0"
-					],
-					"devDependencies": []
-				},
-				{
-					"name": "services",
-					"directory": "registry/notion-like-editor/services",
-					"category": "notion-like-editor",
-					"tests": false,
-					"subdirectory": true,
-					"list": true,
-					"files": [
-						"collaboration.js"
-					],
-					"localDependencies": [],
-					"dependencies": [
+						"@tiptap/core@^3.0.7",
+						"@tiptap/pm@^3.0.3",
+						"@tiptap/suggestion",
+						"@tiptap/vue-3@^3.0.3",
+						"tippy.js@^6.3.7",
+						"@tiptap/extension-list@^3.0.3",
+						"@tiptap/extension-text-style@^3.0.3",
+						"@tiptap/starter-kit@^3.0.3",
+						"@rcode-link/tiptap-comments@^1.0.2",
+						"tiptap-extension-resize-image@^1.2.2",
 						"yjs@^13.6.27",
 						"y-websocket@^3.0.0"
 					],
 					"devDependencies": [],
 					"_imports_": {}
+				},
+				{
+					"name": "simple-editor",
+					"directory": "registry/components/simple-editor",
+					"category": "components",
+					"tests": false,
+					"docs": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"components/ImageNodeView.vue",
+						"components/ImageSettings.vue",
+						"components/ImageUploadButton.vue",
+						"components/TableButton.vue",
+						"components/TablePopover.vue",
+						"components/VideoNodeView.vue",
+						"components/VideoSettings.vue",
+						"components/VideoUploadButton.vue",
+						"extensions/image-upload.js",
+						"extensions/table.js",
+						"index.vue"
+					],
+					"localDependencies": [
+						"components/ui"
+					],
+					"dependencies": [
+						"@tiptap/vue-3@^3.0.3",
+						"lucide-vue-next@^0.525.0",
+						"@tiptap/core@^3.0.7",
+						"@tiptap/extension-table@^3.0.7",
+						"@tiptap/starter-kit@^3.0.3",
+						"@tiptap/extension-highlight@^3.0.7",
+						"@tiptap/extension-text-style@^3.0.3",
+						"@tiptap/extension-text-align@^3.0.7",
+						"@tiptap/extension-list@^3.0.3",
+						"@vueuse/core@^13.6.0"
+					],
+					"devDependencies": [],
+					"_imports_": {
+						"@registry/components/ui/popover": "{{components/ui}}/popover",
+						"@registry/components/ui/dropdown-menu": "{{components/ui}}/dropdown-menu",
+						"@registry/components/ui/input": "{{components/ui}}/input"
+					}
+				},
+				{
+					"name": "ui",
+					"directory": "registry/components/ui",
+					"category": "components",
+					"tests": false,
+					"docs": false,
+					"subdirectory": true,
+					"list": true,
+					"files": [
+						"button/Button.vue",
+						"button/index.ts",
+						"dropdown-menu/DropdownMenu.vue",
+						"dropdown-menu/DropdownMenuCheckboxItem.vue",
+						"dropdown-menu/DropdownMenuContent.vue",
+						"dropdown-menu/DropdownMenuGroup.vue",
+						"dropdown-menu/DropdownMenuItem.vue",
+						"dropdown-menu/DropdownMenuLabel.vue",
+						"dropdown-menu/DropdownMenuRadioGroup.vue",
+						"dropdown-menu/DropdownMenuRadioItem.vue",
+						"dropdown-menu/DropdownMenuSeparator.vue",
+						"dropdown-menu/DropdownMenuShortcut.vue",
+						"dropdown-menu/DropdownMenuSub.vue",
+						"dropdown-menu/DropdownMenuSubContent.vue",
+						"dropdown-menu/DropdownMenuSubTrigger.vue",
+						"dropdown-menu/DropdownMenuTrigger.vue",
+						"dropdown-menu/index.ts",
+						"input/Input.vue",
+						"input/index.ts",
+						"popover/Popover.vue",
+						"popover/PopoverAnchor.vue",
+						"popover/PopoverContent.vue",
+						"popover/PopoverTrigger.vue",
+						"popover/index.ts",
+						"slider/Slider.vue",
+						"slider/index.ts"
+					],
+					"localDependencies": [
+						"lib/utils"
+					],
+					"dependencies": [
+						"reka-ui@^2.4.1",
+						"class-variance-authority@^0.7.1",
+						"@vueuse/core@^13.6.0",
+						"lucide-vue-next@^0.525.0"
+					],
+					"devDependencies": [],
+					"_imports_": {
+						"@registry/lib/utils": "{{lib/utils}}"
+					}
+				}
+			]
+		},
+		{
+			"name": "lib",
+			"blocks": [
+				{
+					"name": "utils",
+					"directory": "registry/lib",
+					"category": "lib",
+					"tests": false,
+					"docs": false,
+					"subdirectory": false,
+					"list": true,
+					"files": [
+						"utils.ts"
+					],
+					"localDependencies": [],
+					"_imports_": {},
+					"dependencies": [
+						"clsx@^2.1.1",
+						"tailwind-merge@^3.3.1"
+					],
+					"devDependencies": []
 				}
 			]
 		},
@@ -119,6 +172,7 @@
 					"directory": "registry/utils",
 					"category": "utils",
 					"tests": false,
+					"docs": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [

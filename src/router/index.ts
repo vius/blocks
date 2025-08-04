@@ -7,7 +7,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView,
+      component: RichTextEditorDemo,
     },
     {
       path: '/demo',
