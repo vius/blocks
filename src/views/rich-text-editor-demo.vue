@@ -6,6 +6,7 @@
 
 <script setup>
 import SimpleToolbarEditor from '@registry/components/simple-editor/index.vue'
+
 </script>
 
 <style scoped>

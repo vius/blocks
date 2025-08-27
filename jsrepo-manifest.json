@@ -9,38 +9,19 @@
 					"directory": "registry/components/notion-like-editor",
 					"category": "components",
 					"tests": false,
-					"docs": false,
 					"subdirectory": true,
 					"list": true,
 					"files": [
-						"components/BubbleMenu.vue",
-						"components/CollaborationStatus.vue",
-						"components/DragHandle.vue",
-						"components/FloatingMenu.vue",
-						"components/TableMenu.vue",
-						"extensions/block-extension.js",
-						"extensions/drag-drop.js",
-						"extensions/markdown-shortcuts.js",
-						"extensions/slash-command/CommandsList.vue",
-						"extensions/slash-command/commands.js",
-						"extensions/slash-command/suggestion.js",
-						"index.vue",
-						"services/collaboration.js"
+						"index.vue"
 					],
 					"localDependencies": [],
 					"dependencies": [
-						"@tiptap/core@^3.0.7",
-						"@tiptap/pm@^3.0.3",
-						"@tiptap/suggestion",
-						"@tiptap/vue-3@^3.0.3",
-						"tippy.js@^6.3.7",
 						"@tiptap/extension-list@^3.0.3",
 						"@tiptap/extension-text-style@^3.0.3",
 						"@tiptap/starter-kit@^3.0.3",
+						"@tiptap/vue-3@^3.0.3",
 						"@rcode-link/tiptap-comments@^1.0.2",
-						"tiptap-extension-resize-image@^1.2.2",
-						"yjs@^13.6.27",
-						"y-websocket@^3.0.0"
+						"tiptap-extension-resize-image@^1.2.2"
 					],
 					"devDependencies": [],
 					"_imports_": {}
@@ -50,93 +31,38 @@
 					"directory": "registry/components/simple-editor",
 					"category": "components",
 					"tests": false,
-					"docs": false,
 					"subdirectory": true,
 					"list": true,
 					"files": [
-						"components/ImageNodeView.vue",
-						"components/ImageSettings.vue",
-						"components/ImageUploadButton.vue",
-						"components/TableButton.vue",
-						"components/TablePopover.vue",
-						"components/VideoNodeView.vue",
-						"components/VideoSettings.vue",
-						"components/VideoUploadButton.vue",
-						"extensions/image-upload.js",
-						"extensions/table.js",
 						"index.vue"
 					],
-					"localDependencies": [
-						"components/ui"
-					],
+					"localDependencies": [],
 					"dependencies": [
 						"@tiptap/vue-3@^3.0.3",
-						"lucide-vue-next@^0.525.0",
-						"@tiptap/core@^3.0.7",
-						"@tiptap/extension-table@^3.0.7",
 						"@tiptap/starter-kit@^3.0.3",
 						"@tiptap/extension-highlight@^3.0.7",
 						"@tiptap/extension-text-style@^3.0.3",
 						"@tiptap/extension-text-align@^3.0.7",
 						"@tiptap/extension-list@^3.0.3",
+						"@registry/components",
+						"lucide-vue-next@^0.525.0",
 						"@vueuse/core@^13.6.0"
 					],
 					"devDependencies": [],
-					"_imports_": {
-						"@registry/components/ui/popover": "{{components/ui}}/popover",
-						"@registry/components/ui/dropdown-menu": "{{components/ui}}/dropdown-menu",
-						"@registry/components/ui/input": "{{components/ui}}/input"
-					}
+					"_imports_": {}
 				},
 				{
 					"name": "ui",
 					"directory": "registry/components/ui",
 					"category": "components",
 					"tests": false,
-					"docs": false,
 					"subdirectory": true,
 					"list": true,
-					"files": [
-						"button/Button.vue",
-						"button/index.ts",
-						"dropdown-menu/DropdownMenu.vue",
-						"dropdown-menu/DropdownMenuCheckboxItem.vue",
-						"dropdown-menu/DropdownMenuContent.vue",
-						"dropdown-menu/DropdownMenuGroup.vue",
-						"dropdown-menu/DropdownMenuItem.vue",
-						"dropdown-menu/DropdownMenuLabel.vue",
-						"dropdown-menu/DropdownMenuRadioGroup.vue",
-						"dropdown-menu/DropdownMenuRadioItem.vue",
-						"dropdown-menu/DropdownMenuSeparator.vue",
-						"dropdown-menu/DropdownMenuShortcut.vue",
-						"dropdown-menu/DropdownMenuSub.vue",
-						"dropdown-menu/DropdownMenuSubContent.vue",
-						"dropdown-menu/DropdownMenuSubTrigger.vue",
-						"dropdown-menu/DropdownMenuTrigger.vue",
-						"dropdown-menu/index.ts",
-						"input/Input.vue",
-						"input/index.ts",
-						"popover/Popover.vue",
-						"popover/PopoverAnchor.vue",
-						"popover/PopoverContent.vue",
-						"popover/PopoverTrigger.vue",
-						"popover/index.ts",
-						"slider/Slider.vue",
-						"slider/index.ts"
-					],
-					"localDependencies": [
-						"lib/utils"
-					],
-					"dependencies": [
-						"reka-ui@^2.4.1",
-						"class-variance-authority@^0.7.1",
-						"@vueuse/core@^13.6.0",
-						"lucide-vue-next@^0.525.0"
-					],
+					"files": [],
+					"localDependencies": [],
+					"dependencies": [],
 					"devDependencies": [],
-					"_imports_": {
-						"@registry/lib/utils": "{{lib/utils}}"
-					}
+					"_imports_": {}
 				}
 			]
 		},
@@ -148,7 +74,6 @@
 					"directory": "registry/lib",
 					"category": "lib",
 					"tests": false,
-					"docs": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
@@ -172,7 +97,6 @@
 					"directory": "registry/utils",
 					"category": "utils",
 					"tests": false,
-					"docs": false,
 					"subdirectory": false,
 					"list": true,
 					"files": [
