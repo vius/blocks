@@ -176,7 +176,7 @@
       </button>
     </div>
 
-    <editor-content class="tiptap" :editor="editor" @click.capture="handleClick" />
+    <editor-content class="tiptap" :editor="editor" @contextmenu.capture="handleContextMenu" />
 
     <!-- Table Popover -->
     <TablePopover :editor="editor" :show="showTablePopover" :position="tablePopoverPosition"
@@ -244,6 +244,13 @@ const editor = ref(null)
 // Table popover state
 const showTablePopover = ref(false)
 const tablePopoverPosition = ref({ top: 0, left: 0 })
+
+// 隐藏表格菜单的处理函数
+const handleHideTablePopover = () => {
+  if (showTablePopover.value) {
+    showTablePopover.value = false
+  }
+}
 
 onMounted(() => {
   editor.value = new Editor({
@@ -333,10 +340,16 @@ onMounted(() => {
       },
     },
   })
+
+  // 监听键盘和点击事件隐藏表格菜单
+  document.addEventListener('click', handleHideTablePopover)
+  document.addEventListener('keydown', handleHideTablePopover)
 })
 
 onUnmounted(() => {
   if (editor.value) editor.value.destroy()
+  document.removeEventListener('click', handleHideTablePopover)
+  document.removeEventListener('keydown', handleHideTablePopover)
 })
 
 const linkUrl = ref('')
@@ -380,7 +393,7 @@ const unsetLink = () => {
 const openLink = () => {
   window.open(linkUrl.value, '_blank')
 }
-const handleClick = (event) => {
+const handleContextMenu = (event) => {
   if (event.target.tagName === 'A') {
     event.preventDefault()
     const href = event.target.getAttribute('href')
@@ -391,14 +404,25 @@ const handleClick = (event) => {
     }
   }
 
-  // Handle table cell clicks for popover
+  // Handle table cell right-click for popover
   if (event.target.closest('td, th') && editor.value?.isActive('table')) {
+    event.preventDefault()
+    
+    // 保存当前 selection
+    const selection = editor.value.state.selection
+    
     const rect = event.target.getBoundingClientRect()
     tablePopoverPosition.value = {
-      top: rect.bottom + window.scrollY + 5,
-      left: rect.left + window.scrollX
+      top: event.clientY + window.scrollY,
+      left: event.clientX + window.scrollX
     }
     showTablePopover.value = true
+    
+    // 恢复 selection
+    setTimeout(() => {
+      const tr = editor.value.state.tr.setSelection(selection)
+      editor.value.view.dispatch(tr)
+    }, 0)
   } else {
     showTablePopover.value = false
   }
@@ -834,5 +858,8 @@ const alignList = [{
   width: 1px;
   background: #eaeaea;
   margin: 4px 3px;
+}
+.selectedCell{
+    background: beige;
 }
 </style>

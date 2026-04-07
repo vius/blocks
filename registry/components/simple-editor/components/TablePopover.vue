@@ -196,6 +196,7 @@ const deleteTable = () => {
   box-shadow: 0 10px 38px -10px rgba(22, 23, 24, 0.35), 0 10px 20px -15px rgba(22, 23, 24, 0.2);
   padding: 8px;
   min-width: 180px;
+  position: fixed!important;
 }
 
 .popover-content {
