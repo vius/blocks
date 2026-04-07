@@ -24,7 +24,7 @@
     <button
       @click="addBulletList"
       class="menu-button"
-      title="Bullet List"
+      title="无序列表"
     >
       •
     </button>

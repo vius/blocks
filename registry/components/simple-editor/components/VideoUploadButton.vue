@@ -12,13 +12,13 @@
         <DropdownMenuItem as-child @click="openFileDialog" class="flex cursor-pointer">
           <section>
             <Upload :size="16" class="mr-2" />
-            <span>Upload from device</span>
+            <span>本地上传</span>
           </section>
         </DropdownMenuItem>
         <DropdownMenuItem as-child @click="showUrlInput = true" class="flex cursor-pointer">
           <section>
             <Link :size="16" class="mr-2" />
-            <span>Insert from URL</span>
+            <span>通过URL插入</span>
           </section>
         </DropdownMenuItem>
       </DropdownMenuContent>

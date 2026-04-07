@@ -59,7 +59,7 @@ export default {
         },
       },
       {
-        title: 'Bullet List',
+        title: '无序列表',
         description: 'Create a simple bullet list.',
         icon: '•',
         command: ({ editor, range }) => {

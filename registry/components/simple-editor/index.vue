@@ -62,21 +62,21 @@
             :class="{ 'bg-accent': editor.isActive('bulletList') }" class="flex">
             <section>
               <List :size="16" :color="editor.isActive('bulletList') ? '#5b48f1' : '#343434'" />
-              <span>Bullet List</span>
+              <span>无序列表</span>
             </section>
           </DropdownMenuItem>
           <DropdownMenuItem as-child @click="editor.chain().focus().toggleOrderedList().run()"
             :class="{ 'bg-accent': editor.isActive('orderedList') }" class="flex">
             <section>
               <ListOrdered :size="16" :color="editor.isActive('orderedList') ? '#5b48f1' : '#343434'" />
-              <span>Ordered List</span>
+              <span>有序列表</span>
             </section>
           </DropdownMenuItem>
           <DropdownMenuItem as-child @click="editor.chain().focus().toggleTaskList().run()"
             :class="{ 'bg-accent': editor.isActive('taskList') }" class="flex">
             <section>
               <ListTodo :size="16" :color="editor.isActive('taskList') ? '#5b48f1' : '#343434'" />
-              <span>Task List</span>
+              <span>任务列表</span>
             </section>
           </DropdownMenuItem>
         </DropdownMenuContent>
